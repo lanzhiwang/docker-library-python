@@ -7,7 +7,10 @@
 FROM buildpack-deps:bullseye
 # [1/5] FROM docker.io/library/buildpack-deps:bullseye
 
-RUN env
+# RUN env
+# RUN env
+# HOME=/root
+# PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 # ensure local python is preferred over distribution python
 ENV PATH /usr/local/bin:$PATH
@@ -229,6 +232,16 @@ RUN set -eux; \
 # + rm -f get-pip.py
 # + pip --version
 
-RUN env
+# RUN env
+# RUN env
+# HOME=/root
+# PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# LANG=C.UTF-8
+# GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D
+# PYTHON_VERSION=3.10.14
+# PYTHON_PIP_VERSION=23.0.1
+# PYTHON_SETUPTOOLS_VERSION=65.5.1
+# PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/ac00c61f60b2df101b7cdf90ed319b625ac93b42/public/get-pip.py
+# PYTHON_GET_PIP_SHA256=0f8bb2652c0b0965f268312f49ec21e772d421d381af4324beea66b8acf2635c
 
 CMD ["python3"]
